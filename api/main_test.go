@@ -12,12 +12,14 @@ import (
 func TestHandler(t *testing.T) {
 	request := events.APIGatewayProxyRequest{
 		QueryStringParameters: map[string]string{
-			"number": "5",
+			"number":  "5",
+			"mensaje": "Si funciona, esta automatizado",
 		},
 	}
 
 	expectedResponse := Response{
-		Result: 10,
+		Result:  10,
+		Mensaje: "Si funciona, esta automatizado",
 	}
 
 	ctx := context.Background()
