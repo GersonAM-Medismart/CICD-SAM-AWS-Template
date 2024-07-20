@@ -38,7 +38,7 @@ func handler(ctx context.Context, request events.APIGatewayProxyRequest) (events
 	}
 
 	result := number * 2
-	response := Response{Result: result, Mensaje: "Si funciona, esta automatizado"}
+	response := Response{Result: result, Mensaje: "Si funciona, esta automatizado con github actions"}
 	responseBody, err := json.Marshal(response)
 	if err != nil {
 		return events.APIGatewayProxyResponse{
