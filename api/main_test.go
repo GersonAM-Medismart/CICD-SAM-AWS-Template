@@ -13,13 +13,13 @@ func TestHandler(t *testing.T) {
 	request := events.APIGatewayProxyRequest{
 		QueryStringParameters: map[string]string{
 			"number":  "5",
-			"mensaje": "Si funciona, esta automatizado con github actions - prueba",
+			"mensaje": "Si funciona, esta automatizado con github actions - prueba1",
 		},
 	}
 
 	expectedResponse := Response{
 		Result:  10,
-		Mensaje: "Si funciona, esta automatizado con github actions - prueba",
+		Mensaje: "Si funciona, esta automatizado con github actions - prueba1",
 	}
 
 	ctx := context.Background()
