@@ -19,7 +19,7 @@ func TestHandler(t *testing.T) {
 
 	expectedResponse := Response{
 		Result:  10,
-		Mensaje: "Si funciona, esta automatizado con github actions",
+		Mensaje: "Si funciona, esta automatizado con github actions - prueba",
 	}
 
 	ctx := context.Background()
