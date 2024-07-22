@@ -1,31 +1,35 @@
-# prueba-app
+# Template integración continua AWS SAM y Golang
 
-This is a sample template for prueba-app - Below is a brief explanation of what we have generated for you:
+Este es un template para que futuros desarrolladores puedan descargar el código e implementar los microservicios necesarios
 
 ```bash
 .
-├── Makefile                    <-- Make to automate build
-├── README.md                   <-- This instructions file
-├── hello-world                 <-- Source code for a lambda function
-│   ├── main.go                 <-- Lambda function code
-│   └── main_test.go            <-- Unit tests
+├── Makefile                    <-- Make para automatizar el build del codigo go (Es como el de c++)
+├── README.md                   <-- Archivo de información
+├── api                         <-- Código que se ejecutará en la lambda
+│   ├── main.go                 <-- Código source de la lamda
+│   └── main_test.go            <-- Test unitarios del main (si se hacen cambios en el input/output de la funcion, hay que cambiarlo, así mismo, aquí se deben probar las funciones)
+
 └── template.yaml
 ```
 
-## Requirements
+## Requeridos
 
-* AWS CLI already configured with Administrator permission
-* [Docker installed](https://www.docker.com/community-edition)
+* AWS CLI configurado con permisos de administración
+* [Docker instalado](https://www.docker.com/community-edition)
 * [Golang](https://golang.org)
 * SAM CLI - [Install the SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html)
 
-## Setup process
+## Primera instalación - Nueva lamda - nuevo repositorio
+  
+* Descargar código como .zip
+* 
 
-### Installing dependencies & building the target 
-
+### Instalación
+ 
 In this example we use the built-in `sam build` to automatically download all the dependencies and package our build target.   
 Read more about [SAM Build here](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-cli-command-reference-sam-build.html) 
-
+ 
 The `sam build` command is wrapped inside of the `Makefile`. To execute this simply run
  
 ```shell
